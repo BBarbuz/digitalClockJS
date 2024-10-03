@@ -1,0 +1,99 @@
+/* Styl ogólny */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#clockCointeiner {
+    text-align: center;
+    padding: 20px;
+}
+
+#clock {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.1rem;
+    color: #32CD32; /* Jaskrawy zielony kolor */
+}
+
+#sliderCointeiner {
+    margin-bottom: 40px; /* Większy odstęp od przycisku */
+}
+
+#slider {
+    width: 50px; /* Skrócony suwak */
+    margin: 0 10px;
+    appearance: none;
+    height: 8px;
+    background: #ccc;
+    outline: none;
+    border-radius: 5px;
+}
+
+#slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #333;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#sliderLabel {
+    font-weight: bold;
+}
+
+#toggleDarkMode {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+#toggleDarkMode:hover {
+    background-color: #444;
+}
+
+/* Stylizacja dla dark mode */
+body.dark-mode {
+    background-color: #000; /* Całkowicie czarne tło */
+    color: #f0f0f0;
+}
+
+body.dark-mode #clock {
+    color: #32CD32; /* Jaskrawy zielony w trybie ciemnym */
+}
+
+body.dark-mode #toggleDarkMode {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+body.dark-mode #toggleDarkMode:hover {
+    background-color: #ddd;
+}
+
+body.dark-mode #slider {
+    background: #555; /* Ciemniejszy kolor suwaka w trybie ciemnym */
+}
+
+body.dark-mode #slider::-webkit-slider-thumb {
+    background: #f0f0f0; /* Jasny kursor w trybie ciemnym */
+}
